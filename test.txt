@@ -1,0 +1,145 @@
+1.角标颜色   #FB7E48
+2,审核按钮颜色  #3DD67A
+3.灰色字体颜色   #737373    菜单按钮  CACDD0    同意按钮 28C228
+4.红色字体  #FF2115
+5.灰色线条   E1E1E1
+6.标题栏  灰色  F2F2F2
+7.圆圈   大 DEDEDE  小 C6C6C6
+8.灰色背景   EEEEEE
+蓝色背景  4BB8E9
+打钩 mui-icon-checkmarke
+ 头部蓝色  1CA8E7
+新闻  灰色636B77  蓝色63C3EE
+<span class="mui-icon mui-icon-search"></span>
+
+<span class="mui-icon mui-icon-arrowdown" style="position: absolute;right: 15px; top: 10px;color: #737373;"></span>
+
+
+头部无样式   <header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">公告附件</h1>
+		</header>
+
+头部有button
+<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">通知公告</h1>
+			<!--btn-->
+			<div style="width: 30px;height: 30px;position: absolute;top: 5px;right: 5px;text-align: center;">
+				<span class="mui-icon mui-icon-search" style="color: white; width: 30px;height: 30px;padding: 0;padding-top: 5px;font-weight: 500;"></span>
+			</div>
+		</header>
+
+		有文字
+		 <header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">通勤卡申请流程</h1>
+			<div style="width: 95px;height: 44px;color: white; float: right;line-height: 44px;padding-left: 15px;"><span>保存草稿</span></div>
+		</header>
+
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">员工订票表</h1>
+			<div style="width: 95px;height: 44px;color: white; float: right;line-height: 44px;padding-left: 50px;"><span>确定</span></div>
+		</header>
+
+
+		输入框
+		<input type="text" class="mui-input-clear mui-pull-right"style="height: 35px; color:#737373; width: 210px;margin-bottom: 0;position: absolute;top:4px;right: 20px;">
+
+							<input type="text" value="2213629" class="mui-input-clear mui-pull-right"style="height: 35px;text-align: right;color:#737373; width: 170px;margin-bottom: 0;position: absolute;top:4px;right: 20px;">
+
+
+
+<!--bottom-->
+			<div style="position: fixed;bottom:0;width: 100%;">
+				<button style="height: 45px; width: 100%;border-left: none;border-right: none;border-radius: 0;">发送</button>
+			</div>	
+
+
+
+自动换行问题,正常字符的换行是比较合理的,而连续的数字和英文字符常常将容器撑大,挺让人头疼,下面介绍的是CSS如何实现换行的方法
+
+最佳CSS定义换行代码
+
+.wrap { table-layout:fixed; word-break:break-all; overflow:hidden; }	
+
+
+可变li
+<li class="mui-table-view-cell">
+					<label class="mmlableft">科室</label>
+					<div style="width:70%; table-layout:fixed; word-break:break-all; overflow:hidden; float: right;background-color: palegreen;height:auto;text-align: right;">
+                   <label style="width:100%;" id="ks">地方大幅</label>
+                </div>
+					</li>
+
+
+
+数据请求
+	function funCancer(){
+		    var url = 'http://10.9.37.17:8011/BYDSOA/WP_MOBILE/Proxy_Service/CCDB_PROC_pxbm_diqu_PS?';
+			var inputJson=String('inputJson={"empnum":"1877925"}');
+			mui.ajax(url, { 
+			data: inputJson,
+			dataType: 'json', //服务器返回json格式数据
+			type: 'get', //HTTP请求类型
+			timeout: 10000, //超时时间设置为10秒；
+				success:function(data){
+				console.log(JSON.stringify(data));
+					response = JSON.stringify(data);
+				var result = JSON.parse(response).RowSet;
+			},
+			error: function(xhr, type, errorThrown) {
+				//异常处理；
+				//				console.log(type);
+				mui.toast("连接超时,请检查网络是否通畅！");
+			}
+		});
+	}
+
+	邮箱地址	密码	工号	姓名	设备
+Alfred.zhang@byd01.com
+1234@byd
+42182	裘彦	iOS
+bai.hongyu@byd01.com
+1234@byd
+1877925	王建东	iOS、Android
+bai.lingbo@byd01.com
+1234@byd
+266894	梁洁文	iOS
+bao.baizhi@byd01.com
+1234@byd
+1838633	代蜀都	Android   dai.shudu@byd.com
+bao.haiyu@byd01.com
+1234@byd
+202100	黄庆	iOS
+chen.chong@byd01.com
+1234@byd
+2213629	杨志祥	Android
+chen.chuan1@byd01.com
+1234@byd
+2493617	陈溪	iOS
+chen.citao@byd01.com
+1234@byd
+2530099	唐政	iOS、Android
+chen.gang13@byd01.com
+1234@byd
+1210444	冯诗玮	Android
+chen.guoliang@byd01.com
+1234@byd
+2567485	李杨	Android
+chen.guoxing3@byd01.com
+1234@byd
+2569653	林培贤	Android
+chen.jinghong@byd01.com
+1234@byd
+2262749	何小明	Android
+
+
+MOASELFHELP_QA  clean install -P qa
+
+
+
+考试查询无数据信息
+
+error：{"code":"1","msg":"{\"empnum\":\"2569653\"}获取考试查询—获得报考科目信息失败，原因：null"}
