@@ -1,0 +1,51 @@
+git 命令行
+
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+创建 learngit 版本库
+$ mkdir learngit
+
+$ cd learngit
+
+显示当前目录
+$ pwd
+
+通过git init命令把这个目录变成Git可以管理的仓库：
+$ git init
+
+添加文件到Git仓库，分两步：
+
+第一步，使用命令 git add <file> ，注意，可反复多次使用，添加多个文件；
+
+第二步，使用命令git commit -m"备注"，完成。
+
+查看状态
+$ git status
+
+查看修改
+$ git diff
+
+查看操作日志
+$ git log
+$ git log --pretty=oneline
+
+恢复到上一个版本
+$ git reset --hard HEAD^
+$ git reset --hard HEAD^^ 上两个版本
+
+恢复指定版本
+$ git reset --hard commitID
+
+从暂存区恢复修改或删除的文件 如果commit过 无法修改 可以用reset恢复
+$git checkout --test.txt 
+
+
+
+
+
+
+
+
+
+
