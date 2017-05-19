@@ -1,0 +1,13 @@
+//     UIDevice *device = [UIDevice currentDevice];
+//    KeychainItemWrapper *itemWrapper = [[KeychainItemWrapper alloc] initWithIdentifier:@"UUIDString" accessGroup:nil];
+//    NSString *uuidString = [itemWrapper objectForKey:(__bridge id)kSecAttrAccount];
+//    NSLog(@"设备类型%@",device.iphoneType);
+//      NSLog(@"UUID：%@",uuidString);
+//          NSLog(@"系统版本：%@",device.systemVersion);
+
+
+
+//字典
+//objectForKey 与valueForKey 多数情况是一样的返回结果，如果key是以@开头 valueForKey就会报错
+[dic valueForKey:@""];//取值
+[dic setValue:@"" forkey:@""];
