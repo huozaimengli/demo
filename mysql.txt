@@ -1,0 +1,25 @@
+登录
+mysql -u root -p
+
+显示所有表
+show databases;
+
+创建表test
+create database if not exists test;
+
+use test
+
+创建 pets
+create table pets (
+    id varchar(50) not null,
+    name varchar(100) not null,
+    gender bool not null,
+    birth varchar(10) not null,
+    createdAt bigint not null,
+    updatedAt bigint not null,
+    version bigint not null,
+    primary key (id)
+) engine=innodb;
+
+显示表结构
+show tables;
