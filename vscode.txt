@@ -22,3 +22,38 @@
     "strings": true
   }
 }
+
+
+//snippet
+
+{
+     "Print to function": {
+        "scope": "text.html",
+        "prefix": "docc",
+        "body": [
+             "<!DOCTYPE html>",
+             "<html lang=\"zh-CN\">",
+             "\t<head>",
+             "\t\t<title>$1</title>",
+             "\t\t<meta charset=\"UTF-8\">",
+             "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+             "\t</head>",
+             "\t<body>",
+             "\t$2",
+             "\t</body>",
+             "</html>"
+        ],
+        "description": "init html"
+     }
+}
+
+{
+    "Print to function": {
+        "scope": "javascript,typescript",
+        "prefix": "fn",
+        "body": [
+            "function $1 ($2){\r\n\t$3\r\n}",
+        ],
+        "description": "init function"
+    }
+}
