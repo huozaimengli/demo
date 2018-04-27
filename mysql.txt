@@ -23,3 +23,24 @@ create table pets (
 
 显示表结构
 show tables;
+
+
+
+===
+mac 安装mysql
+记住临时密码
+
+配置
+vim ~/.bash_profile 
+
+添加 PATH=$PATH:/usr/local/mysql/bin  
+
+source ~/.bash_profile  
+
+登录
+mysql -u root -p 
+输入临时密码
+修改密码
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('newpass'); 
+
+
