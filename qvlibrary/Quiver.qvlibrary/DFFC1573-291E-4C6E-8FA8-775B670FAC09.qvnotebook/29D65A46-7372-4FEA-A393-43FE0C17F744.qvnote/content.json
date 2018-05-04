@@ -1,0 +1,66 @@
+{
+  "title": "NSDictionary",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px; font-stretch: normal; font-size: 16px; line-height: normal; font-family: Menlo; color: rgb(0, 132, 0); background-color: rgb(255, 255, 255);\">1.快速创建不可变字典</p>"
+    },
+    {
+      "type": "code",
+      "language": "objectivec",
+      "data": " NSDictionary *dict1 = @{\n                                @\"name\":@\"lpx\",\n                                @\"age\":@18,\n                                @\"school\":@\"GXNU\"\n                                };\nNSLog(@\"方法一：姓名：%@,年龄:%@,学校:%@\",dict1[@\"name\"],[dict1 objectForKey:@\"age\"],dict1[@\"school\"]);"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px; font-stretch: normal; font-size: 16px; line-height: normal; font-family: Menlo; color: rgb(0, 132, 0); background-color: rgb(255, 255, 255);\">&nbsp; &nbsp;2. 调用dictionaryWithObjectsAndKeys类方法。使用该方法创建字典时，注意其顺序是：value、key并且要以nil结尾</p>"
+    },
+    {
+      "type": "code",
+      "language": "objectivec",
+      "data": "NSDictionary *dict2 = [NSDictionary dictionaryWithObjectsAndKeys:@\"lpx\",@\"name\",\n                               @\"18\",@\"age\",\n                               @\"GXNU\",@\"school\",\n                               nil];\n          NSLog(@\"方法二：姓名：%@,年龄:%@,学校:%@\",dict2[@\"name\"],[dict2 objectForKey:@\"age\"],dict2[@\"school\"]);"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px; font-stretch: normal; font-size: 16px; line-height: normal; font-family: Menlo; color: rgb(0, 132, 0); background-color: rgb(255, 255, 255);\">&nbsp;3. 使用键数组和值数组创建字典。把字典中的key以及value，按照对应顺序，分别放在一个数组中，然后调用dictionaryWithObjects: forKeys：方法，创建字典。</p>"
+    },
+    {
+      "type": "code",
+      "language": "objectivec",
+      "data": " NSArray *keys = @[@\"name\",@\"age\",@\"school\"];\n        NSArray *values = @[@\"llpx\",@\"11\",@\"GXNU\"];\n        NSDictionary *dict3 = [NSDictionary dictionaryWithObjects:values forKeys:keys];\n        NSLog(@\"方法三：姓名：%@,年龄:%@,学校:%@\",dict3[@\"name\"],[dict3 objectForKey:@\"age\"],dict3[@\"school\"])"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 132, 0); font-family: Menlo; font-size: 16px; background-color: rgb(255, 255, 255);\">遍历键值对</span>"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px; font-stretch: normal; font-size: 16px; line-height: normal; font-family: Menlo; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">&nbsp;<span style=\"color: #ba2da2\">for</span> (<span style=\"color: #703daa\">NSDictionary</span> *key <span style=\"color: #ba2da2\">in</span> dict1) {</p>\n<p style=\"margin: 0px; font-stretch: normal; font-size: 16px; line-height: normal; font-family: Menlo; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style=\"color: #3e1e81\">NSLog</span>(<span style=\"color: #d12f1b\">@\"遍历 key:%@ ---- value:%@\"</span>,key,dict1[key]);</p>\n<p style=\"margin: 0px; font-stretch: normal; font-size: 16px; line-height: normal; font-family: Menlo; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">&nbsp; &nbsp; &nbsp; &nbsp; }</p>"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px; font-stretch: normal; font-size: 16px; line-height: normal; font-family: Menlo; color: rgb(0, 132, 0); background-color: rgb(255, 255, 255);\">&nbsp;获取字典所有的keys以数组形式返回</p>"
+    },
+    {
+      "type": "code",
+      "language": "objectivec",
+      "data": "     NSArray *keysArr = [dict1 allKeys];\n     NSLog(@\"dict中所有的key:%@\",keysArr);"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px; font-stretch: normal; font-size: 16px; line-height: normal; font-family: Menlo; color: rgb(0, 132, 0); background-color: rgb(255, 255, 255);\">获取字典所有的values以数组形式返回</p>"
+    },
+    {
+      "type": "code",
+      "language": "objectivec",
+      "data": "     NSArray *valuesArr = [dict1 allValues];\n     NSLog(@\"dict中所有的key:%@\",valuesArr);"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}
