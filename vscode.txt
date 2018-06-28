@@ -1,3 +1,16 @@
+web 插件
+
+Beautify
+Chinese (Simplified) Language Pack for Visual Studio Code
+Code Runner
+HTML CSS Support
+HTML Snippets
+HTMLHint
+jQuery Code Snippets
+Live Server
+View In Browser
+
+
 {
     "window.zoomLevel": 1,
     "git.enableSmartCommit": true,

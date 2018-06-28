@@ -1,0 +1,11 @@
+
+
+mysql -uroot -p
+
+show databases;
+
+use typecho
+
+select * from typecho_users\G
+
+update typecho_users set password='e10adc3949ba59abbe56e057f20f883e' where name='admin';
